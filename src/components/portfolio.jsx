@@ -16,10 +16,17 @@ export const Portfolio = ({ section, data }) => {
         <div className="row">
           {data.map((e) => (
             <div className="col-md-4" key={e.title}>
-              <div className="work-box" style={{ padding: "10px 0" }}>
-                <a href={e.img[0]} data-lightbox="gallery-vmarine">
+              <div
+                className="work-box"
+                style={{
+                  padding: "10px 0",
+                  height: "550px",
+                  position: "relative",
+                }}
+              >
+                <a href={e.heroimg} data-lightbox="gallery-vmarine">
                   <div className="work-img">
-                    <img src={e.img[0]} alt="" className="img-fluid" />
+                    <img src={e.heroimg} alt="" className="img-fluid" />
                   </div>
                   <div className="work-content">
                     <div className="row">
@@ -42,6 +49,9 @@ export const Portfolio = ({ section, data }) => {
                     paddingBottom: "20px",
                     display: "flex",
                     justifyContent: "center",
+                    width: "100%",
+                    bottom: "5%",
+                    position: "absolute",
                   }}
                 >
                   <a
@@ -52,7 +62,7 @@ export const Portfolio = ({ section, data }) => {
                       fontWeight: "bold",
                       padding: "2px 28px",
                       color: "#000000f0",
-                      marginTop:"30px",
+                      marginTop: "30px",
                       cursor: "pointer",
                     }}
                     href={e.link}

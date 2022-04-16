@@ -1,4 +1,5 @@
 import React from "react";
+import me from "../img/me.jpg"
 
 class About extends React.Component {
   constructor() {
@@ -29,7 +30,7 @@ class About extends React.Component {
           id: "Nodejs_skill",
           content: "Nodejs",
           porcentage: "70%",
-          value: "70",
+          value: "60",
         },
 
         {
@@ -62,13 +63,13 @@ class About extends React.Component {
           content: "c++",
           porcentage: "60%",
           value: "60",
-        },     
+        },
       ],
       about_me: [
         {
           id: "first-p-about",
           content:
-            "Hey there i am harsh. I am a front-end developer ",
+            "Hey there, I am a Web developer based in Delhi. I have worked as a React frontend developer but i also have some knowledge of the backend. I have been using React for about a year, so I have good experience in building a responsive , fluid and interactive website. ",
         },
         // {
         //   id: "second-p-about",
@@ -112,24 +113,21 @@ class About extends React.Component {
                     <div className="skill-mf">
                       {/* <p className="title-s">Skill</p> */}
                       {this.state.skills.map((skill) => (
-                          <div key={skill.id}>
-                            <span>{skill.content}</span>{" "}
-                            <span className="pull-right">
-                              {skill.porcentage}
-                            </span>
-                            <div className="progress">
-                              <div
-                                className="progress-bar"
-                                role="progressbar"
-                                style={{ width: skill.porcentage }}
-                                aria-valuenow={skill.value}
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                              ></div>
-                            </div>
+                        <div key={skill.id}>
+                          <span>{skill.content}</span>{" "}
+                          <span className="pull-right">{skill.porcentage}</span>
+                          <div className="progress">
+                            <div
+                              className="progress-bar"
+                              role="progressbar"
+                              style={{ width: skill.porcentage }}
+                              aria-valuenow={skill.value}
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
                           </div>
-                        )
-                      )}
+                        </div>
+                      ))}
                     </div>
                   </div>
                   <div className="col-md-6">
@@ -137,13 +135,21 @@ class About extends React.Component {
                       <div className="title-box-2">
                         <h5 className="title-left">About Me</h5>
                       </div>
-                      {this.state.about_me.map((content) => {
-                        return (
-                          <p className="lead" key={content.id}>
-                            {content.content}
-                          </p>
-                        );
-                      })}
+                      <div className="d-flex flex-column" style={{gap:"50px"}}>
+                        <img
+                          src={me}
+                          className="rounded-circle shadow-4"
+                          style={{ width: "180px",height: "180px", objectFit:" cover",objectPosition: "top",margin:"auto",}}
+                          alt="Avatar"
+                        />
+                        {this.state.about_me.map((content) => {
+                          return (
+                            <p className="lead" key={content.id}>
+                              {content.content}
+                            </p>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
                 </div>
