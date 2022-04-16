@@ -1,5 +1,4 @@
 import React from "react";
-import myImage from "../img/myImage.png";
 
 class About extends React.Component {
   constructor() {
@@ -19,12 +18,6 @@ class About extends React.Component {
           content: "ReactJS",
           porcentage: "80%",
           value: "80",
-        },
-        {
-          id: "Redux_skill",
-          content: "Redux",
-          porcentage: "65%",
-          value: "65",
         },
         {
           id: "Redux_skill",
@@ -118,9 +111,8 @@ class About extends React.Component {
                     </div>
                     <div className="skill-mf">
                       {/* <p className="title-s">Skill</p> */}
-                      {this.state.skills.map((skill) => {
-                        return (
-                          <React.Fragment key={skill.id}>
+                      {this.state.skills.map((skill) => (
+                          <div key={skill.id}>
                             <span>{skill.content}</span>{" "}
                             <span className="pull-right">
                               {skill.porcentage}
@@ -135,9 +127,9 @@ class About extends React.Component {
                                 aria-valuemax="100"
                               ></div>
                             </div>
-                          </React.Fragment>
-                        );
-                      })}
+                          </div>
+                        )
+                      )}
                     </div>
                   </div>
                   <div className="col-md-6">

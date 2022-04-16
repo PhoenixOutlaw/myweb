@@ -109,11 +109,11 @@ class Contact extends React.Component {
                           <br />
                           Simply fill the from and send me an email.
                         </p>
-                        {/* <!-- <ul class="list-ico">
-                                <li><span class="ion-ios-location"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
-                                <li><span class="ion-ios-telephone"></span> (617) 557-0089</li>
-                                <li><span class="ion-email"></span> contact@example.com</li>
-                                </ul> --> */}
+                        <ul className="list-ico">
+                                <li><span className="ion-ios-location"></span> Delhi</li>
+                                <li><span className="ion-ios-telephone"></span> +91 9582571333</li>
+                                <li><span className="ion-email"></span> harshyadavv615@.com</li>
+                                </ul> 
                       </div>
                       <div className="socials">
                         <ul>
